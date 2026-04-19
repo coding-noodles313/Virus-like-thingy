@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HI Demo</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+
+<h1>HI Popup Demo</h1>
+<p>This will show "HI" every 5 minutes for 2 hours.</p>
+<button onclick="startDemo()">Start</button>
+
+<script>
+function startDemo() {
+    let count = 0;
+    let maxRuns = 24; // 2 hours (5 min × 24)
+
+    let interval = setInterval(() => {
+        alert("HI");
+        count++;
+
+        if (count >= maxRuns) {
+            clearInterval(interval);
+            alert("Demo finished!");
+        }
+    }, 5 * 60 * 1000); // 5 minutes
+}
+</script>
+
+</body>
+</html>
