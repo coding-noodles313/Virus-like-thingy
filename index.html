@@ -6,7 +6,7 @@
 <body style="text-align:center; font-family:sans-serif;">
 
 <h1>HI Popup Demo</h1>
-<p>This will show "HI" every 5 minutes for 2 hours.</p>
+<p>This will show "HI" every 5 seconds for 2 hours.</p>
 <button onclick="startDemo()">Start</button>
 
 <script>
@@ -22,7 +22,7 @@ function startDemo() {
             clearInterval(interval);
             alert("Demo finished!");
         }
-    }, 5 * 60 * 1000); // 5 minutes
+    }, 5 * 1000); // 5 seconds
 }
 </script>
 
